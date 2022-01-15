@@ -1,0 +1,111 @@
+<html>
+
+<head>
+ <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav id="navbar">
+        <header>JS Functions</header>
+        <ul>
+            <li>
+                <a class="nav-link" href="#Introduction">Introduction</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Function_declarations">Function declarations</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Calling_functions">Calling functions</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Function_scope">Function Scope</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Recursion">Recursion</a>
+            </li>
+
+        </ul>
+    </nav>
+    <main id="main-doc">
+        <section class="main-section" id="Introduction">
+            <header>Introduction</header>
+            <article>
+                <p> Functions are one of the fundamental building blocks in JavaScript. A function in JavaScript is similar to a procedure—a set of statements that performs a task or calculates a value, but for a procedure to qualify as a function, it should
+                    take some input and return an output where there is some obvious relationship between the input and the output. To use a function, you must define it somewhere in the scope from which you wish to call it.
+                </p>
+                <p>See also the exhaustive reference chapter about JavaScript functions to get to know the details.</p>
+
+
+            </article>
+        </section>
+
+        <section class="main-section" id="Function_declarations">
+            <header>Function declarations</header>
+            <article>
+                <p> A function definition (also called a function declaration, or function statement) consists of the function keyword, followed by:</p>
+                <ul>
+                    <li>The name of the function</li>
+                    <li>A list of parameters to the function, enclosed in parentheses and separated by commas.</li>
+                    <li>The JavaScript statements that define the function, enclosed in curly brackets, {...}</li>
+                </ul>
+                <p>For example, the following code defines a simple function named square: </p>
+                <code>function square(number) { 
+                    return number * number; 
+                  }</code>
+                <p>The function square takes one parameter, called number. The function consists of one statement that says to return the parameter of the function (that is, number) multiplied by itself. The statement return specifies the value returned
+                    by the function:</p>
+                <code>return number * number; </code>
+            </article>
+        </section>
+        <br>
+        <section class="main-section" id="Calling_functions">
+            <header>Calling functions</header>
+            <article>
+                <p>Defining a function does not execute it. Defining it names the function and specifies what to do when the function is called.</p>
+                <p>Calling the function actually performs the specified actions with the indicated parameters. For example, if you define the function square, you could call it as follows:</p>
+                <code>square(5);</code>
+                <p>The preceding statement calls the function with an argument of 5. The function executes its statements and returns the value 25.</p>
+                <p>Functions must be in scope when they are called, but the function declaration can be hoisted (appear below the call in the code), as in this example:</p>
+                <code>console.log(square(5));
+            /* ... */
+            function square(n) { return n * n }</code>
+                <p>You could then compute the factorials of 1 through 5 as follows:</p>
+                <p>var a, b, c, d, e;</p>
+                <ul>
+                    <li>a = factorial(1); // a gets the value 1</li>
+                    <li>b = factorial(2); // b gets the value 2</li>
+                    <li>c = factorial(3); // c gets the value 6</li>
+                    <li>d = factorial(4); // d gets the value 24</li>
+                    <li>e = factorial(5); // e gets the value 120</li>
+                </ul>
+            </article>
+        </section>
+
+        <section class="main-section" id="Function_scope">
+            <header>Function scope</header>
+            <article>
+                <p>Variables defined inside a function cannot be accessed from anywhere outside the function, because the variable is defined only in the scope of the function. However, a function can access all variables and functions defined inside the
+                    scope in which it is defined.</p>
+            </article>
+        </section>
+        <section class="main-section" id="Recursion">
+            <header>Recursion</header>
+            <article>
+                <p>A function can refer to and call itself. There are three ways for a function to refer to itself:</p>
+                <ul>
+                    <li>The function's name</li>
+                    <li>arguments.callee</li>
+                    <li>An in-scope variable that refers to the function</li>
+
+                    <code>var foo = function bar() {
+                // statements go here
+             }</code>
+
+            </article>
+        </section>
+
+    </main>
+
+</body>
+
+</html>
